@@ -492,6 +492,8 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
 .hero{
   padding:100px 0px 550px 0px;
   background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
 /* --------- Compass / All Two Column--------- */
@@ -505,6 +507,8 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
 
 .captain{
   background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 .captain .captain_inner{
   width: 100%;

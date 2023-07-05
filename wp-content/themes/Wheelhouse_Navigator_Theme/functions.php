@@ -68,7 +68,7 @@ add_filter('upload_mimes', 'acf_svg_file_type');
 // Registring for menu : This function hepls in showing menu option under appearance tab => appearance>menu
 function mytheme_register_menus() {
     register_nav_menus(array(
-        'primary-menu' => 'Primary Header Left',
+        'primary-menu' => ' Header_Menu',
         'secondary-menu' => 'Primary Header Right',
         'footer-menu' => 'Footer Menu'
     ));
