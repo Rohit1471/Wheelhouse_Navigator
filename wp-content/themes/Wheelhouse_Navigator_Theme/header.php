@@ -16,6 +16,8 @@
         // ------------- Declaring Varibales -------------
         $header_logo = get_field( 'header_logo', 'options' ); 
         $contact_us_button = get_field( 'contact_us_button', 'options' ); 
+        $contact_us_button = str_replace(array('http://', 'https://'), '', $contact_us_button);
+        $contact_us_button = rtrim($contact_us_button, '/');
     ?>    
    
     <header class="header sticky padtop30 padbot30 box_shadow1">
@@ -24,7 +26,7 @@
                 <div class="header_inner flex space_between align_center">
                     <div class="logo left">
                         <a href="#">
-                            <img src="<?php echo $header_logo; ?>" alt="#">
+                            <?php echo $header_logo; ?>
                         </a>
                     </div>
                     <div class="hamburger none">

@@ -1,13 +1,13 @@
 <?php
 
     // Footer
-    $footer_logo = get_field( 'footer_logo' );
-    $footer_left_heading = get_field( 'footer_left_heading' );
-    $footer_left_content = get_field( 'footer_left_content' );
-    $footer_right_heading = get_field( 'footer_right_heading' );
-    $footer_right_content = get_field( 'footer_right_content' );
-    $footer_right_tel = get_field( 'footer_right_tel' );
-    $copyright_content = get_field( 'copyright_content' );
+    $footer_logo = get_field( 'footer_logo', 'options');
+    $footer_left_heading = get_field( 'footer_left_heading', 'options' );
+    $footer_left_content = get_field( 'footer_left_content', 'options' );
+    $footer_right_heading = get_field( 'footer_right_heading', 'options' );
+    $footer_right_content = get_field( 'footer_right_content', 'options' );
+    $footer_right_tel = get_field( 'footer_right_tel', 'options' );
+    $copyright_content = get_field( 'copyright_content', 'options' );
 
 ?>
 
@@ -16,7 +16,7 @@
             <div class="wrapper">
                 <div class="footer_inner">
                     <div class="up padbot60">
-                        <?php echo $footer_logo; ?>
+                        <img src="<?php echo $footer_logo; ?>" alt="Footer_logo">
                     </div>
                     <div class="down text_left flex align_center space_between gap40">
                         <div class="left">

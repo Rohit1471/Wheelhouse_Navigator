@@ -7,7 +7,11 @@
 
     // Buttons
     $learn_more_button = get_field( 'learn_more_button' );
+    $learn_more_button = str_replace(array('http://', 'https://'), '', $learn_more_button);
+    $learn_more_button = rtrim($learn_more_button, '/');
     $learn_more2_button = get_field( 'learn_more2_button' );
+    $learn_more2_button = str_replace(array('http://', 'https://'), '', $learn_more2_button);
+    $learn_more2_button = rtrim($learn_more2_button, '/');
     
     // Hero
     $hero_heading = get_field( 'hero_heading' );
