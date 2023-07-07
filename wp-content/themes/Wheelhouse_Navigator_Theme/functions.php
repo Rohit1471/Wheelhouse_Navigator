@@ -22,7 +22,7 @@ function enqueue_all_files() {
     wp_enqueue_script( 'Slick_JS', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js', array(), '1.0', false );
     
     // My JS
-    wp_enqueue_script( 'my_script', get_template_directory_uri(). ( '/assets/js/bw_script.js' ), array(), '1.0', false );
+    wp_enqueue_script( 'my_script', get_template_directory_uri(). ( '/assets/js/wn_script.js' ), array(), '1.0', false );
     
     // My CSS
     wp_enqueue_style( 'my_style', get_template_directory_uri() . '/style.css', array(), '1.0', false);

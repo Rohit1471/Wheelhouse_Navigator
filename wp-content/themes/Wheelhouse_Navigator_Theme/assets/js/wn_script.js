@@ -107,4 +107,9 @@ $(document).ready(function(){
     // Fontawesome
     $('.fa_2x').children().addClass('fa-2xl');
 
+
+    // Form{
+      $("input[type=submit]").addClass('form_button');
+    
+
 })
