@@ -110,6 +110,62 @@ $(document).ready(function(){
 
     // Form{
       $("input[type=submit]").addClass('form_button');
+
+
+
+
+
+
+
+    
+        // // Hamburger toggle function
+        // $('.hamburger').on('click resize', function(){
+        //     child_array= $(this).children();
+        //     child_array.each(function(index){
+        //         child_array.eq(index).toggleClass(`line${index+1}`);
+        //     })
+        //     $('.header .right').slideToggle(400);
+        // });
+    
+  $('.sextant_image_slider').slick({
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots:true,
+      arrows: true,
+    });
+
+    let number1;
+    let number2;
+    $(window).scroll(function(){
+      let number_html= $('.relative_section .counter_div .number1');
+      let number_html2= $('.relative_section .counter_div .number2');
+      let value= Number.parseInt($('.relative_section .counter_div .number1').text());
+      let value2= Number.parseInt($('.relative_section .counter_div .number2').text());
+
+      number1= setInterval(function(){
+          if(value <= 136){
+              value++
+              number_html.text(value);
+              number_html2.text(Math.floor((63*value)/136));
+          }else{
+              clearInterval(number1);
+          }
+      },10)         
+
+      
+    })
+              
+    
+    
+     
+    
+    
+    
+   
     
 
 })

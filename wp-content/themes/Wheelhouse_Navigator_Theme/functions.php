@@ -26,6 +26,15 @@ function enqueue_all_files() {
     
     // My CSS
     wp_enqueue_style( 'my_style', get_template_directory_uri() . '/style.css', array(), '1.0', false);
+
+    // My Compass CSS
+    wp_enqueue_style( 'my_compass_style', get_template_directory_uri(). ( '/assets/css/compass.css' ), array(), '1.0', false );
+    
+    // My Sextant CSS
+    wp_enqueue_style( 'my_sextant_style', get_template_directory_uri(). ( '/assets/css/sextant.css' ), array(), '1.0', false );
+    
+    // My Sonar CSS
+    wp_enqueue_style( 'my_sonar_style', get_template_directory_uri(). ( '/assets/css/sonar.css' ), array(), '1.0', false );
     
 }   // Intializing the function
     add_action( 'wp_enqueue_scripts', 'enqueue_all_files' );

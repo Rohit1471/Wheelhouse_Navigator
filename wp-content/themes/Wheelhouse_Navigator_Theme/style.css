@@ -10,9 +10,6 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-
-/*---------------------------- Main Global Starts ----------------------------*/
-
 /* MEDIA QUERIE BREAKPOINTS
   1920
   1440
@@ -35,8 +32,11 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   --primary: #6E7277;
   --secondary: #3DBEAF;
   --main_header: #2D393B;
-  --form: #B2B5B6; 
-  --form_background: #EDEDED;
+  --compass_main: #007F71;
+  --sonar_main: #34AFC2;
+}
+.mywhite{
+  color:white;
 }
   
   *, ::after, ::before {  box-sizing: border-box;  margin: 0;  padding: 0px;}
@@ -69,6 +69,9 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   .relative { position: relative;}
   .absolute { position: absolute;} 
   .sticky {position: sticky; top:0; z-index: 99;}
+  .width100{
+    width: 100%;
+  }
 
   
   /*---------------------------- Text Alignment ----------------------------*/
@@ -87,7 +90,12 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   h5,.h5 h5 {  font-family: 'Montserrat', sans-serif;  font-size: 20px;  line-height: 1.4;  font-weight: 800;}
   h6,.h6 h6{  font-family: 'Montserrat', sans-serif;  font-size: 16px;  line-height: 1.25;  font-weight: 600; letter-spacing: 2.4px;}
   p,.p p {  font-family: 'Lato', sans-serif;  font-size: 24px;    line-height: 1.5;  font-weight: 400;}
-  input, input[placeholder], textarea, textarea[placeholder] {  font-family: 'Lato', sans-serif;  font-size: 24px;    line-height: 1.5;  font-weight: 400; color: #757575;}
+  .h7,.h7 p {  font-family: 'Lato', sans-serif;  font-size: 36px;    line-height: 1.16;  font-weight: 300;}
+  .h8,.h8 p {  font-family: 'Lato', sans-serif;  font-size: 56px;    line-height: 1.16;  font-weight: 300;}
+
+  /* Counter */
+  .h9,.h9 p {  font-family: 'Montserrat', sans-serif;  font-size: 70px;  line-height: 1.2;  font-weight: 800; letter-spacing: 3.5px; color:#3DBEAF;}
+  .h10,.h10 p {  font-family: 'Montserrat', sans-serif;  font-size: 18px;    line-height: 1.33;  font-weight: 600; letter-spacing: 0.9px; color:#2D393B;}
 
   
   @media only screen and (max-width: 1180px) {
@@ -103,6 +111,15 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
     p{
       font-size: 20px;
     }
+    .h7,.h7 p{
+      font-size: 32px;
+    }
+    .h8,.h8 p{
+      font-size: 50px;
+    }
+    .h9,.h9 p {
+      font-size: 40px;
+    }
   }
   @media only screen and (max-width: 768px) {
 
@@ -114,6 +131,18 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
     }    
     p{
       font-size: 18px;
+    }
+    .h7,.h7 p{
+      font-size: 26px;
+    }
+    .h8,.h8 p{
+      font-size: 32px;
+    }
+    .h9,.h9 p {
+      font-size: 40px;
+    }
+    .h10,.h10 p {
+      font-size: 16px;
     }
   }
   @media only screen and (max-width: 640px) {
@@ -128,6 +157,12 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
     }  
     p{
       font-size: 16px;
+    }
+    .h7,.h7 p{
+      font-size: 20px;
+    }
+    .h8,.h8 p{
+      font-size: 26px;
     }
   }
 
@@ -268,7 +303,7 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   /*---------------------------- Button ----------------------------*/
 
 
-  .button a, .button1 a, .button2 a, .button3 a, .form_button{
+  .button a, .button1 a, .button2 a, .button3 a{
     display: inline-block;
     text-decoration: none;
     outline: 0;
@@ -298,13 +333,13 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
     box-shadow: inset 400px 0 0 0 var(--secondary);    
   }
 
-  .button2 a, .form_button{
+  .button2 a{
     color: var(--mywhite);
     background-color: var(--secondary);
     border: 2px solid var(--secondary);
     box-shadow: inset 0 0 0 0 var(--secondary);
   }  
-  .button2 a:hover, .form_button:hover{
+  .button2 a:hover{
     color: var(--secondary);   
     box-shadow: inset 400px 0 0 0 var(--mywhite);    
   }
@@ -464,6 +499,8 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   margin: 0 auto;
   padding: 0px 15px;
 }
+
+
 
 
 
@@ -724,6 +761,10 @@ form input[type=submit]{
   }
   .header .header_inner{
       gap:25px;
+  }
+  .header .logo svg{
+    width: 100%;
+    max-width: 210px;
   }
   .captain{
       padding:60px 0px;

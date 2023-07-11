@@ -1,0 +1,320 @@
+
+
+
+/* --------- Header --------- */
+.header{
+    background-color: var(--mywhite);
+}
+.header .hamburger .line{
+    height:3px;
+    width: 30px;
+    display: block;
+    background-color: var(--secondary);
+    transition: all 0.3s ease;
+    margin:5px;
+}
+
+/* --------- Hero --------- */
+.compass_hero .compass_hero_outer{
+    background-color: var(--secondary);
+}
+
+.m_hero .content{
+    width: 100%;
+    max-width: 966px;
+    margin: 0 auto;
+    margin-bottom:65px;
+    color: var(--mywhite);
+    padding: 113px 0px 350px 0px;
+}
+
+.m_hero .image{
+   margin-top: -315px;
+}
+
+
+/* --------- Compass / All Two Column--------- */
+
+.two_column .content{
+    width: 100%;
+    max-width: 460px;
+}
+
+/* --------- Captain --------- */
+
+.working_c{
+    background-color:var(--compass_main);
+    padding: 140px 0px;
+}
+.working .listing ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:65px;
+}
+.working .listing li{
+    display: flex;
+    align-items: center;
+    gap:30px;
+    width: 100%;
+    max-width: 680px;
+}
+.working .listing1 li p{
+    width:100%;
+    word-wrap: wrap;
+    max-width: 560px;
+}
+.working .listing2 li p{
+    width:100%;
+    word-wrap: wrap;
+    max-width: 476px;
+}
+.working img{
+    min-width: 90px;
+}
+
+
+/* --------- Footer--------- */
+
+.footer{
+    background-color: var(--main_header);
+    color: var(--mywhite);
+}
+.footer .down .left{
+    width: 100%;
+    max-width: 820px;
+}
+.footer p{
+    font-weight: 300;
+}
+.footer .down .right{
+    width: 100%;
+    max-width: 378px;
+}
+.footer a{
+    font-weight: 300;
+    color:var(--mywhite);
+}
+/* ------------- Copyright ------------- */
+.copyright{
+    background-color: var(--secondary);
+    color:var(--mywhite);
+}
+
+
+
+/* --------------------------- Media Query --------------------------- */
+
+  
+@media only screen and (max-width: 1700px) {  
+}
+@media only screen and (max-width: 1600px) {  
+}
+@media only screen and (max-width: 1440px) {
+}
+@media only screen and (max-width: 1366px) { 
+}
+@media only screen and (max-width: 1280px) {
+    .hero {
+        padding: 100px 0px 380px 0px;
+    }
+}
+@media only screen and (max-width: 1180px) {
+    .two_column .two_column_inner{
+        gap:70px;
+    }
+    .two_column .content{
+        gap:15px;
+    }
+    .two_column{
+        padding:50px 0px;
+    }
+}
+@media only screen and (max-width: 1080px) {
+}
+@media only screen and (max-width: 1024px) {  
+}
+@media only screen and (max-width: 991px) { 
+    .header{
+        position: relative;
+    }
+    .header .hamburger{
+        display: block;
+    }
+    .header .hamburger .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .header .hamburger .line2{
+        transition: all 0.7s ease;
+        width:0;
+    }
+    .header .hamburger .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+    .header .right{
+        display: none;
+        position: absolute;
+        z-index: 10;
+        top:80px;
+        left:50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+        text-align: center;
+        background-color: var(--primary);
+        width: 100%;
+        padding:50px 0px;       
+    }
+    .header .right ul{
+        flex-direction: column;
+        padding-bottom:75px;
+        transition: all 0.7s ease;
+    }
+    .header .right ul li a{ 
+        color:var(--mywhite);
+    }
+    .hero {
+        padding: 100px 0px 280px 0px;
+    }
+
+    /* ------------Compass Page----------- */
+    .working .listing ul {
+        gap: 30px;
+    }
+    .working .main_listing img{
+        height: 50px;
+    }
+    .working .main_listing{
+        flex-direction: column;
+        align-items: start;
+    }
+    .working .listing li{
+        width: 100%;
+        max-width: 100%;
+    }
+    .working .listing1 li p{
+        width:100%;
+        max-width: 100%;
+    }
+    .working .listing2 li p{
+        width:100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------Compass Page--------- */
+    .m_hero .content{
+        padding: 45px 0px 235px 0px;;
+    }
+    .m_hero .image{
+        width:75%;
+        margin-top: -224px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .two_column .two_column_inner .content{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin:0 auto;
+    }
+    .two_column .image{
+        display: none;
+    }
+    .two_column .image_in{
+        display: flex;
+    }
+    .two_column{
+        padding:20px 0px;
+    }
+    .footer .down{
+        flex-wrap: wrap;
+    }
+    .footer a{
+        font-size: 18px;
+    }
+    .hero {
+        padding: 50px 0px 200px 0px;
+    }
+
+    /* --------------- Compass ------------- */
+    .working{
+        padding: 60px 0px;
+    }
+    .working .content{
+        padding-bottom: 35px;
+    }
+    
+}
+@media only screen and (max-width: 640px) { 
+    .hero {
+        padding: 50px 0px 100px 0px;
+    }
+    .hero .content{
+        padding: 0px;
+    }
+    .footer a{
+        font-size: 16px;
+    }      
+
+    /* Compass Page */
+    .m_hero .content{
+        padding: 45px 0px 260px 0px;;
+    }
+    .m_hero .image{
+        width:75%;
+        margin-top: -320px;
+    }
+}
+@media only screen and (max-width: 520px) { 
+    /* Compass Page */
+    .m_hero .content{
+        padding: 45px 0px 220px 0px;;
+    }
+    .m_hero .image{
+        /* width:90%; */
+        margin-top: -280px;
+    }
+
+}
+@media only screen and (max-width: 418px) {  
+    .hero {
+        padding: 50px 0px 30px 0px;
+    }
+    .header .header_inner{
+        gap:25px;
+    }
+    .captain{
+        padding:60px 0px;
+    }
+    /* Compass Page */
+    .m_hero .image{
+        width:90%;
+    }
+    .working_c .listing li{
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .working_c .listing li p{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 375px) {
+    /* Compass Page */
+    .m_hero .content{
+        padding: 45px 0px 220px 0px;
+    }
+    .m_hero .image{
+        width:90%;
+        margin-top: -250px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .m_hero .content{
+        padding: 45px 0px 155px 0px;
+    }
+    .m_hero .image{
+        width:90%;
+        margin-top: -215px;
+    }
+}
