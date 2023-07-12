@@ -21,8 +21,8 @@ img{
 .working_sonar .working_outer {
   background-color: var(--sonar_main);
 }
-.m_hero .compass_hero_inner,
-.m_hero img{
+.sonar_hero .sonar_hero_inner,
+.sonar_hero img{
     max-width: 996px;
     margin: 0 auto;
 }

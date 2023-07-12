@@ -431,7 +431,7 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   .g_underline li a::after{
     content: "";
     position: absolute;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     width: 0%;
     margin: 0 auto;
     height: 100%;
