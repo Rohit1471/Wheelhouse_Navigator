@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-
     
     <?php 
         // ------------- Declaring Varibales -------------
@@ -25,8 +23,8 @@
             <div class="wrapper">
                 <div class="header_inner flex space_between align_center">
                     <div class="logo left">
-                        <a href="#">
-                            <?php echo $header_logo; ?>
+                        <a href="<?php echo get_home_url(); ?>">
+                            <img src="<?php echo $header_logo; ?>" alt="#">
                         </a>
                     </div>
                     <div class="hamburger none">

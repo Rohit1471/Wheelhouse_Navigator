@@ -40,6 +40,11 @@
     $working_images = get_field('working_images');
     $working_p = get_field('working_p');
     $working_listing_2 = get_field('working_listing_2');
+
+    // Form
+    $form_heading = get_field( 'form_heading' );
+    $form_content = get_field( 'form_content' );
+    $form_form = get_field( 'form_form' );   
     
 ?>
     
@@ -236,6 +241,24 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="form padtop100 padbot110"">
+        <div class="form_outer">
+            <div class="wrapper">
+                <div class="form_inner text_center margin">
+                    <div>
+                        <h2><?php echo $form_heading; ?></h2>
+                    </div>
+                    <div class="padtop30 padbot60">
+                        <p><?php echo $form_content; ?></p>
+                    </div>
+                    <div class="main_form">
+                        <?php echo $form_form; ?>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
