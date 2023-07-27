@@ -1,0 +1,336 @@
+/* @font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-ExtraBold.woff2') format('woff2'),
+        url('Gilroy-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Light.woff2') format('woff2'),
+        url('Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+:root{
+    --form_font:'Gilroy';
+    --form_bg_color: #1994FB;
+    --form_text_color: #FFFFFF;
+    --form_button: #E33165;
+    --form_button_hover: #0D1325;
+  }
+  .f1 p {font-size: 19px; line-height: 1.21; font-weight: 700;}
+  .f2 p {font-size: 17px; line-height: 2; font-weight: 300;}
+  .f3 p {font-size: 16px; line-height: 1.18; font-weight: 300;}
+  .f4 p {font-size: 14px; line-height: 1.42; font-weight: 800;}
+
+  .multi_step_form *{
+    padding: 0;
+    margin: 0;
+  }
+  
+  .multi_step_form_wrapper{
+    background-color: var(--form_bg_color);
+    color: var(--form_text_color);
+    width: 100%;
+    max-width: 607px !important;
+    margin: 0 auto;
+    padding:50px;
+  }
+  .multi_step_form_wrapper .multi_step_form{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    gap:50px;
+  }
+  .multi_step_form_wrapper .multi_step_form label{
+    font-size: 19px; line-height: 1.21; font-weight: 700;
+    color: white !important;
+  }
+  .multi_step_form .validation_error{
+    display: none;
+  }
+  .multi_step_form .validation_message{
+    font-size: 16px !important;
+  }
+  .multi_step_form input{
+    width: 100% !important;
+    padding: 10px 40px;
+    color: #1994fb;
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    background-color: #FFFFFF;
+  }
+  .multi_step_form .chosen-container-multi,
+  .multi_step_form .chosen-container-multi ul,
+  .multi_step_form .chosen-container-multi ul>li,
+  .multi_step_form .chosen-container-multi ul li input{
+    width: 100% !important;
+  }
+  .multi_step_form .chosen-container-multi ul li input{
+    color: #1994fb !important;
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    background-color: #FFFFFF !important;
+    height: 100%;
+  }
+  .multi_step_form .chosen-container-multi ul li input[type=text]{
+    color: #1994fb !important;
+    background-color: #FFFFFF !important;
+  }
+  .multi_step_form select{
+    width: 100% !important;
+    max-width: 237px;
+    padding: 0 20px;
+    background-color: white;
+    color: #1994fb;
+    outline: none;
+    border-radius: none !important;
+    line-height: 1.5;
+  }
+  .multi_step_form div#input_2_25_chosen {
+    width: 100% !important;
+    max-width: 237px;
+    font-size: 22px;
+  }
+  .multi_step_form select:hover {
+    cursor: pointer;
+  }
+  .multi_step_form select option,
+  .multi_step_form #input_2_25,
+  .multi_step_form .chosen-results li{
+    width: 100% !important;
+    max-width: 237px;
+    background-color: #1994fb;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .multi_step_form select option:hover,
+  .multi_step_form .chosen-results li .highlighted{
+    background-color: #FFFFFF !important;
+    cursor: pointer;
+  }
+  .multi_step_form .gform_page_footer,
+  .multi_step_form .gf_page_steps{
+    border: none !important;
+  }
+  .multi_step_form .gform_page_footer input[type=button], 
+  .multi_step_form .gform_page_footer input[type=submit]{
+    width: 100% !important;
+    border-radius: 0;
+    color: #FFFFFF;
+    background: #E33165;
+    transition: all ease-in-out 0.4s;
+    margin-bottom: 30px !important;
+  }
+  .multi_step_form .gform_previous_button{    
+    margin-bottom: 30px !important;
+  } 
+  .multi_step_form .gform_page_footer{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .multi_step_form .gform_page_footer::after{
+    content: "\f061";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #FFFFFF;
+    opacity: 1 !important;
+    font-size: 20px;
+    z-index: 99;
+    top: 30px;
+    left: 207px;
+    cursor: pointer;
+  }
+  .multi_step_form input[type=button]:hover,
+  .multi_step_form .gform_page_footer input[type=submit]:hover{
+    background: #0D1325;
+    cursor: pointer;
+  }
+  .multi_step_form .gf_step{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .multi_step_form .gf_step_number{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 1px !important;
+    background: #FFFFFF;
+    width: 15px;
+    height: 15px;
+    border-radius: 99px;
+    left: -38px;
+    top: 70px;
+    z-index: 20;
+  }
+  .multi_step_form .gf_step_number::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 99px;
+    z-index: 1;
+    opacity: 0.5;
+  }
+  .multi_step_form .gf_page_steps .gf_step:not(:nth-child(3))::after{
+    content: "";
+    position: absolute;
+    width: 236px;
+    height: 2px;
+    left: -148px;;
+    top: 197px;
+    background: #FFFFFF;
+    transform: rotate(90deg);
+    z-index: 10;
+  }
+  .multi_step_form .gf_step img{
+    width: 100px;
+    background-color: white;
+    padding: 30px;
+  }
+  .multi_step_form .gf_page_steps {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    width: 100%;
+    max-width: 180px;
+    padding-left: 50px !important;
+  }
+  .multi_step_form input[type=text]{
+    color: #1994fb !important;
+    margin-bottom: 0px !important;
+  }
+
+  .gform_confirmation_wrapper_2 {    
+    text-align: center;
+    padding: 80px 0;
+  }
+  .multi_step_form .gfield_error{
+    background-color: transparent !important;
+    margin-bottom: 0px!important;
+    border-top: none !important;
+    border-bottom: none !important;
+  }
+  .multi_step_form .gfield_description {
+    padding-top:0px !important;
+  }
+
+  @media only screen and (max-width: 768px){
+    .multi_step_form_wrapper .multi_step_form{
+      flex-direction: column;
+    }
+    .multi_step_form .gf_page_steps{
+      flex-direction: row !important;
+      justify-content: space-between; 
+      gap: 0px !important;
+      padding: 0px !important;
+      height: unset !important;   
+      max-width: 100% !important; 
+    }
+    .multi_step_form .gf_step{
+      height: unset !important;
+      display: flex !important;
+      justify-content: start;
+      text-align: center;
+      align-items: center;
+      margin: 0 !important;
+    }
+    .multi_step_form .gf_step_label{
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+    }
+    .multi_step_form .gf_step_label br{
+      display: none;
+    }
+    .multi_step_form .gf_step_number{
+      left: 40px;
+      top: 0px;
+    }
+    .multi_step_form .gf_page_steps .gf_step:not(:nth-child(3))::after {
+      position: absolute;
+      width: 150px;
+      left: 62px;
+      top: 6px;
+      transform: rotate(0deg);
+    }
+    .multi_step_form .gf_page_steps .gf_step:nth-child(2)::after{
+      width: 120px;
+    }
+    .multi_step_form select {
+      max-width: 100% !important;
+    }
+    .multi_step_form select option,
+    .multi_step_form #input_2_25 option{
+      max-width: 100% !important;
+    }
+    .multi_step_form div#input_2_25_chosen {
+      max-width: 100% !important;
+    }
+    .multi_step_form .gform_page_footer::after {
+      left: 460px;
+    }
+  }
+
+
+
+
+
+ */
+ .gform_wrapper {
+    width: 100%;
+    max-width: 1080px !important;
+    margin: 0 auto !important;
+    position: relative;
+  }
+  .gform_wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background: #e5e5e5;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  .gform_wrapper .gform_page_footer {
+    margin: 14px 0 0 0 !important;
+    padding: 14px 0 !important;
+  }
+  .gform_wrapper input{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .gform_wrapper #gform_4{
+    position: relative;
+  }
+  .gform_wrapper form {
+    position: relative;
+  }
+  
+  
+

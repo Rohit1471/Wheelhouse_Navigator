@@ -35,6 +35,8 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   --compass_main: #007F71;
   --sonar_main: #34AFC2;
   --form_background: #EDEDED;
+  --listing_page_bg: #36454F;
+  --listing_page_bg_hover: #536876;
 }
 .mywhite{
   color:white;
@@ -599,7 +601,7 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
 
 /* ------------- Form ------------- */
 
-form{
+.form form{
   width: 100%;
   max-width: 1180px;
   margin:0;
@@ -610,10 +612,10 @@ form{
   grid-template-rows: repeat(4, auto);
   gap:30px;
  }
-form br{
+.form form br{
   display: none;
 }
-form input{
+.form form input{
   width: 100%;
   padding: 10px 40px;
   color: #757575;
@@ -622,19 +624,19 @@ form input{
   border: none;
   border-radius: 5px;
 }
-form p:nth-child(6){
+.form form p:nth-child(6){
   grid-column: 1 / span 2;
   grid-row: 3 / span 1;
 }
-form p:nth-child(7){
+.form form p:nth-child(7){
   text-align: left;
   grid-column: 1 / span 2;
   grid-row: 4 / span 1;
 }
-form p span{
+.form form p span{
   text-align: left;
 }
-form textarea{
+.form form textarea{
   width: 100%;
   padding: 15px 40px;
   color: #B2B5B6;
@@ -644,7 +646,7 @@ form textarea{
   border: none;
   border-radius: 5px;
 }
-form input[type=submit]{
+.form form input[type=submit]{
   width: 220px;
   padding: 9px 40px;
   font-size: 20px;
@@ -665,6 +667,169 @@ form input[type=submit]{
   border: 2px solid var(--secondary);
   box-shadow: inset 0 0 0 0 var(--secondary);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Listing Page */
+.listing_page {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+.listing_page .wrapper{
+  width: 100%;
+  max-width: 1420px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+.listing_page .repeater{
+  display: grid;
+  grid-template-columns: repeat(3, calc((100% / 3) - 7.5px));
+  justify-content: center;
+  grid-gap:10px;
+  padding: 10px;
+  margin: 0 auto;
+  background: rgb(255,0,0);
+  background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(255,235,0,1) 50%, rgba(9,9,121,1) 100%);
+}
+.listing_page .repeater>div{
+  background-color: var(--primary);
+  padding: 20px;
+  transition: all 0.4s;
+}
+.listing_page .repeater>div:hover{
+  background-color: var(--listing_page_bg_hover);
+  cursor: pointer;
+}
+.listing_page .repeater>div .author p:before{
+  content: "By ";
+}
+.listing_page .one{
+  grid-column: span 2;
+}
+.listing_page .one .left{
+  width: 100%;
+  max-width: 352px;
+}
+.listing_page .one .right{
+  width: 100%;
+  max-width: 500px;
+}
+.listing_page .one .image{
+  height: 100%;
+  width: 100%;
+}
+.listing_page .one .image img{
+  width:100%;
+  max-width: 500px;
+  height:100%;
+  margin: auto 0;
+  border-radius: 5px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.listing_page .two{
+  flex-direction: column-reverse;
+}
+.listing_page .two h2{
+  font-size: 28px;  
+  line-height: 1.21;  
+  font-weight: 500;
+}
+
+
+/* gravity_contact_form for listing page */
+
+.gravity_contact_form .gravity_contact_form_inner *{
+  margin: 0 !important;
+}
+.gravity_contact_form form{
+  width: 100%;
+  max-width: 1180px;
+  margin:0;
+  margin: 0 auto;
+  padding:0;
+ }
+ .gravity_contact_form form ul{
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 20px;
+ }
+ .gravity_contact_form ul,
+ .gravity_contact_form li{
+  width: 100%;
+  padding: 0px !important;
+  text-align: center;
+ }
+ .gravity_contact_form .validation_error{
+    margin-bottom: 25px !important;
+ }
+ .gravity_contact_form .gform_confirmation_wrapper{
+  text-align: center;
+ }
+.gravity_contact_form form input{
+  width: 100% !important;
+  max-width: 100%;
+  padding: 10px 40px !important;
+  color: #757575;
+  background-color: var(--form_background);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.gravity_contact_form form ul li:nth-child(5){
+  grid-column: 1 / span 2;
+}
+.gravity_contact_form form textarea{
+  width: 100%;
+  padding: 15px 40px;
+  color: #757575;
+  height: 167px;
+  background-color: var(--form_background);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.gravity_contact_form form input[type=submit]{
+  max-width: 220px;
+  padding: 9px 40px;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  outline: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 2.4px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: ease-out 0.4s;
+  color: var(--mywhite);
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  box-shadow: inset 0 0 0 0 var(--secondary);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -748,6 +913,21 @@ form input[type=submit]{
   .header .right ul {
     padding-bottom: 20px !important;
   }
+
+
+  /* Listing Page */
+  .listing_page .repeater>div{
+    flex-direction: row;
+    grid-column: 1 / span 2;
+  }
+  .listing_page .repeater>div>div{
+    width: 50%;
+    max-width: 50%;
+  }
+  .listing_page .repeater{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media only screen and (max-width: 768px) {
   .two_column .two_column_inner .content{
@@ -815,6 +995,24 @@ form input[type=submit]{
   }
   form input {
     padding: 2px 40px !important;
+  }
+
+  /* Gravity Form */
+  .gravity_contact_form form ul{
+        display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+   }
+
+  /* Listing Page */
+  .listing_page .repeater>div{
+    flex-direction: column;
+    grid-column: 1 / span 2;
+  }
+  .listing_page .repeater>div>div{
+    width: 100%;
+    max-width: 100%;
   }
 }
 @media only screen and (max-width: 418px) {  

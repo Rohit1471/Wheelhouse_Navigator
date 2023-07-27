@@ -4,7 +4,7 @@
 function enqueue_all_files() {
 
     // JQuery CDN
-    wp_enqueue_script( 'jQuery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" , array(), '1.0', false );
+    wp_enqueue_script( 'jquery-cdn', "https://code.jquery.com/jquery-3.7.0.js", array(), '1.0', false );
     
     // Fontawesome JS
     wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/4576560a6b.js', array(), '5.15.3', false );
@@ -23,6 +23,9 @@ function enqueue_all_files() {
     
     // My JS
     wp_enqueue_script( 'my_script', get_template_directory_uri(). ( '/assets/js/wn_script.js' ), array(), '1.0', false );
+
+    // My Font CSS
+    wp_enqueue_style( 'my_font_style', get_template_directory_uri() . '/assets/fonts/stylesheet.css', array(), '1.0', false);
     
     // My CSS
     wp_enqueue_style( 'my_style', get_template_directory_uri() . '/style.css', array(), '1.0', false);
@@ -100,5 +103,21 @@ if( function_exists('acf_add_options_page') ) {
   }
 
 
+//   Adding theme support for adding page template under the page attribute option in wordpress dashboard
+    add_theme_support( 'page-templates' );
+
+
+// To add category option for pages
+    function enable_categories_for_pages() {
+        register_taxonomy_for_object_type('category', 'page');
+    }
+    add_action('init', 'enable_categories_for_pages');
+    
+
+
+    function mytheme_setup() {
+        add_theme_support('post-thumbnails');
+    }
+    add_action('after_setup_theme', 'mytheme_setup');
 
 ?>
