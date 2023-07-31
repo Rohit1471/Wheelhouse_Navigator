@@ -35,8 +35,6 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   --compass_main: #007F71;
   --sonar_main: #34AFC2;
   --form_background: #EDEDED;
-  --listing_page_bg: #36454F;
-  --listing_page_bg_hover: #536876;
 }
 .mywhite{
   color:white;
@@ -86,8 +84,6 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
 
   /* font-family: 'Lato', sans-serif;
     font-family: 'Montserrat', sans-serif; */
-
-
   h1,.h1 h1 {  font-family: 'Montserrat', sans-serif;  font-size: 55px;  line-height: 1.74;  font-weight: 600;}
   h2,.h2 h2 {  font-family: 'Montserrat', sans-serif;  font-size: 42px;  line-height: 1.24;  font-weight: 600;}
   h3,.h3 h3 {  font-family: 'Montserrat', sans-serif;  font-size: 28px;  line-height: 1.14;  font-weight: 600; letter-spacing: 2.8px;}
@@ -102,9 +98,6 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   /* Counter */
   .h9,.h9 p {  font-family: 'Montserrat', sans-serif;  font-size: 70px;  line-height: 1.2;  font-weight: 800; letter-spacing: 3.5px; color:#3DBEAF;}
   .h10,.h10 p {  font-family: 'Montserrat', sans-serif;  font-size: 18px;    line-height: 1.33;  font-weight: 600; letter-spacing: 0.9px; color:#2D393B;}
-
-  .lato, .lato p, .lato h1, .lato h2, .lato h3, .lato h4, .lato h5, .lato h6{ font-family: 'Lato', sans-serif; font-weight: 200;}
-  .montserrat, .montserrat p{ font-family: 'Lato', sans-serif; font-weight: 200;}
 
   
   @media only screen and (max-width: 1180px) {
@@ -153,7 +146,6 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
     .h10,.h10 p {
       font-size: 16px;
     }
-
   }
   @media only screen and (max-width: 640px) {
     h1{
@@ -174,7 +166,6 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
     .h8,.h8 p{
       font-size: 26px;
     }
-    form, form input,   form, form textarea {font-size: 20px;}
   }
 
   /*---------------------------- Line Height ----------------------------*/
@@ -504,12 +495,11 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
 
 /*------------------------------- Tips End--------------------------------*/
 
-.wrapper, .wpb_wrapper, .wrapper_width {
+.wrapper{
   width:100%;
-  max-width: 1420px !important;
-  margin: 0 auto !important;
-  padding: 0px 15px !important;
-  left:0 !important;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0px 15px;
 }
 
 
@@ -600,8 +590,8 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
 }
 
 /* ------------- Form ------------- */
-
-.form form{
+/* 
+form{
   width: 100%;
   max-width: 1180px;
   margin:0;
@@ -612,10 +602,10 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   grid-template-rows: repeat(4, auto);
   gap:30px;
  }
-.form form br{
+form br{
   display: none;
 }
-.form form input{
+form input{
   width: 100%;
   padding: 10px 40px;
   color: #757575;
@@ -624,19 +614,19 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   border: none;
   border-radius: 5px;
 }
-.form form p:nth-child(6){
+form p:nth-child(6){
   grid-column: 1 / span 2;
   grid-row: 3 / span 1;
 }
-.form form p:nth-child(7){
+form p:nth-child(7){
   text-align: left;
   grid-column: 1 / span 2;
   grid-row: 4 / span 1;
 }
-.form form p span{
+form p span{
   text-align: left;
 }
-.form form textarea{
+form textarea{
   width: 100%;
   padding: 15px 40px;
   color: #B2B5B6;
@@ -646,7 +636,7 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   border: none;
   border-radius: 5px;
 }
-.form form input[type=submit]{
+form input[type=submit]{
   width: 220px;
   padding: 9px 40px;
   font-size: 20px;
@@ -666,170 +656,7 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   background-color: var(--secondary);
   border: 2px solid var(--secondary);
   box-shadow: inset 0 0 0 0 var(--secondary);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Listing Page */
-.listing_page {
-  background-color: var(--primary);
-  color: #FFFFFF;
-}
-.listing_page .wrapper{
-  width: 100%;
-  max-width: 1420px;
-  padding: 0px 15px;
-  margin: 0 auto;
-}
-.listing_page .repeater{
-  display: grid;
-  grid-template-columns: repeat(3, calc((100% / 3) - 7.5px));
-  justify-content: center;
-  grid-gap:10px;
-  padding: 10px;
-  margin: 0 auto;
-  background: rgb(255,0,0);
-  background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(255,235,0,1) 50%, rgba(9,9,121,1) 100%);
-}
-.listing_page .repeater>div{
-  background-color: var(--primary);
-  padding: 20px;
-  transition: all 0.4s;
-}
-.listing_page .repeater>div:hover{
-  background-color: var(--listing_page_bg_hover);
-  cursor: pointer;
-}
-.listing_page .repeater>div .author p:before{
-  content: "By ";
-}
-.listing_page .one{
-  grid-column: span 2;
-}
-.listing_page .one .left{
-  width: 100%;
-  max-width: 352px;
-}
-.listing_page .one .right{
-  width: 100%;
-  max-width: 500px;
-}
-.listing_page .one .image{
-  height: 100%;
-  width: 100%;
-}
-.listing_page .one .image img{
-  width:100%;
-  max-width: 500px;
-  height:100%;
-  margin: auto 0;
-  border-radius: 5px;
-  overflow: hidden;
-  object-fit: cover;
-}
-.listing_page .two{
-  flex-direction: column-reverse;
-}
-.listing_page .two h2{
-  font-size: 28px;  
-  line-height: 1.21;  
-  font-weight: 500;
-}
-
-
-/* gravity_contact_form for listing page */
-
-.gravity_contact_form .gravity_contact_form_inner *{
-  margin: 0 !important;
-}
-.gravity_contact_form form{
-  width: 100%;
-  max-width: 1180px;
-  margin:0;
-  margin: 0 auto;
-  padding:0;
- }
- .gravity_contact_form form ul{
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  gap: 20px;
- }
- .gravity_contact_form ul,
- .gravity_contact_form li{
-  width: 100%;
-  padding: 0px !important;
-  text-align: center;
- }
- .gravity_contact_form .validation_error{
-    margin-bottom: 25px !important;
- }
- .gravity_contact_form .gform_confirmation_wrapper{
-  text-align: center;
- }
-.gravity_contact_form form input{
-  width: 100% !important;
-  max-width: 100%;
-  padding: 10px 40px !important;
-  color: #757575;
-  background-color: var(--form_background);
-  outline: none;
-  border: none;
-  border-radius: 5px;
-}
-.gravity_contact_form form ul li:nth-child(5){
-  grid-column: 1 / span 2;
-}
-.gravity_contact_form form textarea{
-  width: 100%;
-  padding: 15px 40px;
-  color: #757575;
-  height: 167px;
-  background-color: var(--form_background);
-  outline: none;
-  border: none;
-  border-radius: 5px;
-}
-.gravity_contact_form form input[type=submit]{
-  max-width: 220px;
-  padding: 9px 40px;
-  font-size: 20px;
-  display: inline-block;
-  text-decoration: none;
-  outline: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 2.4px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: ease-out 0.4s;
-  color: var(--mywhite);
-  background-color: var(--secondary);
-  border: 2px solid var(--secondary);
-  box-shadow: inset 0 0 0 0 var(--secondary);
-}
-
-
-
-
-
-
-
-
+} */
 
 
 
@@ -902,31 +729,9 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   }
   .header .right ul li a{ 
       color:var(--mywhite);
-      font-size: 20px;
-  }
-  .header .gap75_child > * {
-      gap: 20px;
   }
   .hero {
       padding: 100px 0px 280px 0px;
-  }
-  .header .right ul {
-    padding-bottom: 20px !important;
-  }
-
-
-  /* Listing Page */
-  .listing_page .repeater>div{
-    flex-direction: row;
-    grid-column: 1 / span 2;
-  }
-  .listing_page .repeater>div>div{
-    width: 50%;
-    max-width: 50%;
-  }
-  .listing_page .repeater{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 768px) {
@@ -955,17 +760,6 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
       padding: 50px 0px 200px 0px;
   }
   
-
-  /* Bakery Builder */
-  .wpb_wrapper{
-    text-align: center !important;
-  }
-  .column_reverse{
-    flex-direction: column-reverse !important;
-  }
-  form {
-    gap: 20px;
-  }
 }
 @media only screen and (max-width: 640px) { 
   .hero {
@@ -977,47 +771,10 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
   .footer a{
       font-size: 16px;
   }      
-
-
-  /* Form */
-  form{
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(4, auto);
-  }
-  form p:nth-child(6){
-    grid-column: 1 / span 1;
-    grid-row: 5 / span 1;
-  }
-  form p:nth-child(7){
-    text-align: left;
-    grid-column: 1 / span 1;
-    grid-row: 6 / span 1;
-  }
-  form input {
-    padding: 2px 40px !important;
-  }
-
-  /* Gravity Form */
-  .gravity_contact_form form ul{
-        display: flex !important;
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
-   }
-
-  /* Listing Page */
-  .listing_page .repeater>div{
-    flex-direction: column;
-    grid-column: 1 / span 2;
-  }
-  .listing_page .repeater>div>div{
-    width: 100%;
-    max-width: 100%;
-  }
 }
 @media only screen and (max-width: 418px) {  
   .hero {
-      padding: 50px 0px 30px 0px !important;
+      padding: 50px 0px 30px 0px;
   }
   .header .header_inner{
       gap:25px;
@@ -1034,4 +791,207 @@ Description: Wheelhouse Navigator is fast, fully customizable & beautiful WordPr
 }
 @media only screen and (max-width: 320px) {
 }
+
+
+
+
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('AvenirLTStd-Book.eot');
+  src: url('AvenirLTStd-Book.eot?#iefix') format('embedded-opentype'),
+      url('AvenirLTStd-Book.woff2') format('woff2'),
+      url('AvenirLTStd-Book.woff') format('woff'),
+      url('AvenirLTStd-Book.ttf') format('truetype'),
+      url('AvenirLTStd-Book.svg#AvenirLTStd-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('AvenirLTStd-Roman.eot');
+  src: url('AvenirLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+      url('AvenirLTStd-Roman.woff2') format('woff2'),
+      url('AvenirLTStd-Roman.woff') format('woff'),
+      url('AvenirLTStd-Roman.ttf') format('truetype'),
+      url('AvenirLTStd-Roman.svg#AvenirLTStd-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('AvenirLTStd-Black.eot');
+  src: url('AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'),
+      url('AvenirLTStd-Black.woff2') format('woff2'),
+      url('AvenirLTStd-Black.woff') format('woff'),
+      url('AvenirLTStd-Black.ttf') format('truetype'),
+      url('AvenirLTStd-Black.svg#AvenirLTStd-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+:root{
+--primary : #797979;
+--secondary : #C7911E;
+--white : #FFFFFF;
+--black : #000000;
+}
+
+.h1,h1,.h1 h1,.h1 p{font-family: 'Avenir LT Std';  font-size: 71px; font-weight: 800 !important; line-height: 1; color: var(--black); padding: 10px 0 50px;}
+.h2,h2,.h2 h2,.h2 p{font-family: 'Avenir LT Std';  font-size: 26px; font-weight: 400; line-height: 1.64;}
+.h3,h3,.h3 h3,.h3 p{font-family: 'Avenir LT Std';  font-size: 20px; font-weight: 900; line-height: 1.64;}
+.h4,h4,.h4 h4,.h4 p{font-family: 'Avenir LT Std';  font-size: 18px; font-weight: 800; line-height: 1.72;}
+.h5,h5,.h5 h5, p, .h5 p{font-family: 'Avenir LT Std';  font-size: 14px; font-weight: 800; line-height: 1.64; color: var(--secondary) !important;}
+
+.primary{color: var(--primary);}
+.secondary{color: var(--secondary);}
+.white{color: var(--white);}
+.black{color: var(--black);}
+
+
+
+
+.black_wolf{
+  font-family: 'Avenir LT Std';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.65;
+  color:var(--primary);
+  padding: 40px !important;
+  margin: 0 auto !important;
+  width: 100%;
+  max-width: 740px !important;
+}
+.black_wolf *{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.black_wolf input{
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+.black_wolf label,
+.black_wolf select{
+  font-size: 26px  !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  color:var(--primary) !important;
+} 
+.black_wolf input{
+  font-size: 26px  !important;
+  font-weight: 400 !important;
+  line-height: 1.38 !important;
+  color:var(--primary) !important;
+}
+.black_wolf .gform_fields>li:not(:first-child){
+  padding: 20px !important;
+  border-bottom: 1px solid var(--secondary);
+}
+
+/* Radio */
+.black_wolf input[type=radio]{
+  display: none !important;
+}
+.black_wolf .ginput_container_radio>ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 192px;
+  border-radius: 9999px;
+  border: 1px solid #e2e1e1;
+}
+.black_wolf .ginput_container_radio>ul li{
+  width: 50%;
+  display: flex;
+}
+.black_wolf .ginput_container_radio label{
+  width:100% !important;
+  max-width:100% !important;
+  padding: 5px !important;
+  text-align: center;
+  border-radius: 99px;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  line-height: 1.72;  
+  transition: all ease .25s;
+  color: var(--black) !important;
+}
+.black_wolf .ginput_container_radio .active_label{
+  background-color: var(--secondary);
+  color: var(--white) !important;
+}
+.black_wolf .bf_radio label{
+  margin-bottom: 8px;
+}
+
+
+/* Select */
+.black_wolf select{
+  border: none;
+  width: 100% !important;
+  outline: none;
+}
+.black_wolf select:hover{
+  cursor: pointer;
+}
+.black_wolf select option:hover{
+  cursor: pointer;
+}
+
+/* Submit */
+.black_wolf input[type=submit]{
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  display: inline-block;
+  transition: all ease .25s;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  font-size: 18px !important;
+  line-height: normal!important;
+  padding: 12px 35px !important;
+  border-radius: 50px;
+  background: var(--secondary);
+  color: var(--white) !important;
+  margin:15px 0 !important;
+  width: 100%;
+}
+.black_wolf input[type=submit]:hover{
+  background: var(--white) !important;
+  color: var(--secondary) !important;
+  border: 1px solid var(--secondary);
+}
+
+/* Spinner */
+.gform_ajax_spinner{
+  display: none;
+}
+
+/* Error */
+.black_wolf .gform_confirmation_wrapper_2 {    
+  text-align: center;
+  padding: 80px 0;
+}
+.black_wolf .gfield_error{
+  background-color: transparent !important;
+  margin-bottom: 0px!important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.black_wolf li.gfield_error input{
+  border: 0px !important;
+}
+
+
 

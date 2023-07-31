@@ -215,11 +215,11 @@ mydiv_assigning_fun(blog_length);
 // $('gf_step_number').html('');
 
 
-$('option').each(function() {
-    var optionText = this.text;
-    var newOption = optionText.substring(0, 20);
-    $(this).text(newOption + '...');
-});
+// $('option').each(function() {
+//     var optionText = this.text;
+//     var newOption = optionText.substring(0, 20);
+//     $(this).text(newOption + '...');
+// });
 
 
 // Change the value of the button
@@ -236,6 +236,19 @@ $('option').each(function() {
 
 // document.getElementById("gform_submit_button_2").value = "Compare";
 
+
+// Black wolf
+
+// Radio Button
+$('.black_wolf .ginput_container_radio li:first-child label').addClass('active_label');
+$('.black_wolf .bf_radio1 .ginput_container_radio label').click(function(){
+    $('.bf_radio1 .active_label').removeClass('active_label');
+    $(this).toggleClass('active_label');
+})
+$('.black_wolf .bf_radio2 .ginput_container_radio label').click(function(){
+    $('.bf_radio2 .active_label').removeClass('active_label');
+    $(this).toggleClass('active_label');
+})
 
 
 
