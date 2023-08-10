@@ -20,6 +20,9 @@ function enqueue_all_files() {
 
     // Slick JS
     wp_enqueue_script( 'Slick_JS', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js', array(), '1.0', false );
+
+    // Google Fonts
+    wp_enqueue_style( 'google_font2', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', array(), '1.0', false);
     
     // My JS
     wp_enqueue_script( 'my_script', get_template_directory_uri(). ( '/assets/js/wn_script.js' ), array(), '1.0', false );
@@ -29,6 +32,7 @@ function enqueue_all_files() {
     
     // My CSS
     wp_enqueue_style( 'my_style', get_template_directory_uri() . '/style.css', array(), '1.0', false);
+
 
     // My Compass CSS
     wp_enqueue_style( 'my_compass_style', get_template_directory_uri(). ( '/assets/css/compass.css' ), array(), '1.0', false );
@@ -121,3 +125,27 @@ if( function_exists('acf_add_options_page') ) {
     add_action('after_setup_theme', 'mytheme_setup');
 
 ?>
+
+
+<!-- -------------------------- Gravity Form -------------------------- -->
+
+<?php 
+
+    // $forms = GFAPI::get_forms();
+
+    // foreach ($forms as $form) {
+    //     $form_id = $form['9'];
+    //     $heading = $form['title'];
+    //     $description = $form['description'];
+        
+    //     if (empty($description) && !empty($heading)) {
+    //         GFAPI::update_form_property($form_id, 'description', $heading);
+    //     }
+    // }
+
+?> 
+
+
+
+
+
